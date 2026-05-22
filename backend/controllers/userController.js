@@ -34,6 +34,7 @@ export const signup = async (req, res) => {
       user,
     });
   } catch (error) {
+    console.log('sign up error', error)
     res.status(500).json({
       message: "something went wrong",
 
@@ -83,6 +84,7 @@ export const login = async (req, res) => {
       user,
     });
   } catch (error) {
+    console.log('login err',error)
     res.status(500).json({
       message: "something went wrong",
 
