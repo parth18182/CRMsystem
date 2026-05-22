@@ -4,7 +4,7 @@ const connection = async () => {
   try {
     await mongoose
       .connect(
-        "mongodb+srv://parthpanchal:parth123@authentication.uvh4pnx.mongodb.net/crmsystem",
+        `${process.env.MONGO_URL}`,
       )
       .then(() => {
         console.log("db is connected");
