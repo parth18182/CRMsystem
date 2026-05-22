@@ -31,6 +31,8 @@ function AuthPage() {
     setError("");
   };
 
+  console.log(import.meta.env.VITE_URL)
+
   const submit = async () => {
     if (!form.email || !form.password || (mode === "signup" && !form.name)) {
       setError("All fields are required");
