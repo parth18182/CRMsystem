@@ -66,6 +66,9 @@ export const login = async (req, res) => {
         message: "Invalid password",
       });
     }
+
+    console.log(process.env.SECRET_KEY)
+
     const token = jwt.sign(
       {
         id: user._id,
